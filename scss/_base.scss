@@ -1,0 +1,19 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    background-color: $bg-color;
+    color: $font-color;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: $font-color;
+}
