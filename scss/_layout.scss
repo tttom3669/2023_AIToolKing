@@ -1,86 +1,132 @@
 // header
-header{
-    height: 80px;
-    padding: 20px 0;
+.header {
+  height: 80px;
+  padding: 20px 0;
 }
-
-.logo{
-    width: 245px;
-}
-
-.headerTitle{
-    h2{
-        font-weight: 900;
-        font-size: 120px;
-        line-height: 120%;
-    }
-    .titleBtn{
-        padding: 20px 40px;
-    }
-    .decoImg{
-        margin-top: 100px;
-        li{
-            overflow: hidden;
-        }
-    }
-}
-
-@media (max-width: 768px){
-    header{
-        padding: 28px 0;
-        .navbar-btn{
-            display: block;
-            margin-right: 11px;
-        }
-        .navbar-menu{
-            display: none;
-        }
-    }
-    .headerTitle{
-        h2{
-            font-size: 48px;
-        }
-        .decoImg{
-            margin-top: 180px;
-            justify-content: center;
-        }
-    } 
-}
-
-
-.animation {
-    animation-name: move-object;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-out;
-    animation-direction: normal;
-    animation-fill-mode: backwards;
-    &-1{
-        animation-delay: 1s;
-        
-    }
-    &-2{
-        animation-delay: 0.5s;
-    }
-    &-3{
-        animation-delay: 0;
-    }
-
+@media (max-width: 768px) {
+  .header {
+    padding: 28px 0;
   }
-  @keyframes move-object {
-    0% {
-        transform: translateY(100%);
+}
+
+.logo,.logo-footer {
+  height: 40px;
+}
+@media (max-width: 768px) {
+  .logo {
+    height: 24px;
+  }
+}
+
+.l-serviceCard {
+  height: 100%;
+  padding: 80px 40px;
+  border: $border-width $border-style $border-color;
+}
+
+@media (max-width: 768px) {
+  .l-serviceCard {
+    padding: 40px 20px;
+  }
+}
+
+.l-partnerList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 160px;
+  img {
+    margin: 10px;
+    height: 40px;
+    width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .l-partnerList {
+    margin-bottom: 48px;
+  }
+}
+
+.l-partnerCard {
+  height: 100%;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.08);
+  .star {
+    margin-bottom: 22px;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.l-tool {
+  background-color: $primary;
+  border-radius: 160px;
+  color: black;
+  padding: 160px 0;
+  a {
+    color: black;
+  }
+}
+@media (max-width: 768px) {
+  .l-tool {
+    padding: 80px 0;
+    border-radius: 20px;
+  }
+}
+
+
+.l-aiToolCard {
+    height: 100%;
+    border: $border-width $border-style $lightGray;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    img {
+      transition: all 0.25s ease;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
-    25% {
-        transform: translateY(0);
+    .content,
+    .info,
+    .tag {
+      padding: 20px 32px;
     }
-    50% {
-        transform: translateY(0);
+    .content,
+    .info {
+      border-bottom: 1px solid $lightGray;
     }
-    75% {
-        transform: translateY(-100%);
+    .content {
+      flex-grow: 1;
+      h3 {
+        color: $secondary;
+        margin-bottom: 12px;
+      }
+      p {
+        color: $gray;
+        font-size: 14px;
+      }
     }
-    100%{
-        transform: translateY(-100%);
+    .tag,
+    .info {
+      display: flex;
+      justify-content: space-between;
+    }
+    .shareBtn {
+      background-color: $primary;
+      border: none;
     }
   }
+
+  @media (max-width: 992px){
+    .l-aiToolCard {
+        width: 100%;
+        text-align: center;
+        img {
+          width: 100%;
+        }
+    }
+}

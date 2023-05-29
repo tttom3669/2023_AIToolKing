@@ -1,7 +1,8 @@
 .btn{
     cursor: pointer;
     background-color: transparent;
-    border: 1px solid #FFFFFF;
-    color: #ffffff;
+    border: $border-width $border-style $border-color;
+    color: $primary;
     border-radius: 16px;
+    padding: 20px 40px;
 }

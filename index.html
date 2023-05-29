@@ -14,15 +14,21 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
     <link rel="stylesheet" href="./css/all.css" />
   </head>
   <body>
     <div class="container">
+      <!-- 導覽列 -->
       <header
-        class="d-flex justify-content-between align-items-center border-bottom"
+        class="header d-flex justify-content-between align-items-center border-bottom"
       >
         <h1>
-          <a href="#">
+          <a href="#" class="d-block">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true"
               class="logo"
@@ -31,37 +37,638 @@
           </a>
         </h1>
         <nav>
-          <button type="button" class="btn border-0 d-none navbar-btn">
+          <button
+            type="button"
+            class="btn border-0 d-none d-md-block navbar-btn"
+          >
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/menu.png?raw=true"
               alt="navBtn-logo"
             />
           </button>
-          <ul class="d-flex fw-700 navbar-menu">
-            <li class="me-20"><a href="#">首頁</a></li>
+          <ul class="d-flex fw-bold d-md-none">
+            <li class="my-20"><a href="#">首頁</a></li>
             <li><a href="#">定價</a></li>
           </ul>
+
+          <!-- 手機版導覽列 -->
+          <!-- <ul class="d-flex fw-bold d-md-none">
+            <li class="my-20"><a href="#">首頁</a></li>
+            <li><a href="#">定價</a></li>
+          </ul> -->
         </nav>
       </header>
-      <section class="headerTitle">
-        <h2 class="mt-40">
+
+      <!-- 頁首-開始使用 -->
+      <section>
+        <h2 class="mt-40 display-2 h1-md">
           透過<br />
           AI 工具王的<br />
           強大模型<br />
           讓您的業務更聰明
         </h2>
-        <button type="button" class="btn titleBtn mt-40">
-            開始使用
-        </button>
-        <ul class="d-flex justify-content-end decoImg">
-            <li><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/deco.png?raw=true" alt="" class="animation animation-1"></li>
-            <li><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/deco.png?raw=true" alt="" class="animation animation-2"></li>
-            <li><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/deco.png?raw=true" alt="" class="animation animation-3"></li>
+        <button type="button" class="btn mt-40">開始使用</button>
+        <ul
+          class="d-flex justify-content-end decoImg-list justify-content-md-center"
+        >
+          <li class="overflow-hidden">
+            <img
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/deco.png?raw=true"
+              alt="decoImg"
+              class="animation animation-1"
+            />
+          </li>
+          <li class="overflow-hidden">
+            <img
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/deco.png?raw=true"
+              alt="decoImg"
+              class="animation animation-2"
+            />
+          </li>
+          <li class="overflow-hidden">
+            <img
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/deco.png?raw=true"
+              alt="decoImg"
+              class="animation animation-3"
+            />
+          </li>
+        </ul>
+      </section>
+
+      <!-- 我們的服務 -->
+      <section class="service">
+        <div class="mb-80 mb-md-48">
+          <div class="row">
+            <div class="col-4">
+              <h2 class="h3 h5-md">我們的服務</h2>
+            </div>
+            <div class="col-8 mt-md-24">
+              <p class="h1 h2-md">
+                我們相信透過 AI 技術，<br />
+                包括圖像識別、自然語言處理和機器翻譯等，讓您更快、更準確地做出決策。
+              </p>
+            </div>
+          </div>
+        </div>
+        <ul class="row align-items-stretch">
+          <div class="col-4">
+            <li class="l-serviceCard rounded">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/flash%20on.png?raw=true"
+                alt="快速"
+                class="mb-20"
+              />
+              <h3 class="h3 mb-20">快速</h3>
+              <p>
+                我們先進的推理基礎設施提供了極短的響應時間，讓你的產品服務不間斷。
+              </p>
+            </li>
+          </div>
+          <div class="col-4 mt-md-12">
+            <li class="l-serviceCard rounded">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/auto%20awesome.png?raw=true"
+                alt="靈活"
+                class="mb-20"
+              />
+              <h3 class="h3 mb-20">靈活</h3>
+              <p>
+                我們的服務可以根據您的需求進行靈活調整，同時還可以滿足不同項目和預算的需求。
+              </p>
+            </li>
+          </div>
+          <div class="col-4 mt-md-12">
+            <li class="l-serviceCard rounded">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/library%20add.png?raw=true"
+                alt="擴充"
+                class="mb-20"
+              />
+              <h3 class="h3 mb-20">擴充</h3>
+              <p>
+                我們的服務支持多種擴充選項，可以滿足您的不斷增長的 AI 需求。
+              </p>
+            </li>
+          </div>
+        </ul>
+      </section>
+
+      <!-- 合作夥伴 -->
+      <section class="partner">
+        <h2 class="h3 h5-md mb-80 mb-md-24">來自合作夥伴</h2>
+        <div class="l-partnerList d-md-none">
+          <div class="shadow"></div>
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise.png?raw=true"
+            style="width: 100px"
+            alt="enterprise"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise1.png?raw=true"
+            alt="enterprise1"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise2.png?raw=true"
+            alt="enterprise2"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise3.png?raw=true"
+            alt="enterprise3"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise4.png?raw=true"
+            alt="enterprise4"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise5.png?raw=true"
+            alt="enterprise5"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise6.png?raw=true"
+            alt="enterprise6"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise7.png?raw=true"
+            alt="enterprise7"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise8.png?raw=true"
+            alt="enterprise8"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise9.png?raw=true"
+            alt="enterprise9"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise11.png?raw=true"
+            alt="enterprise11"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise12.png?raw=true"
+            alt="enterprise12"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise7.png?raw=true"
+            alt="enterprise7"
+          />
+        </div>
+
+        <!-- 手機版合作夥伴清單 -->
+        <div class="l-partnerList d-none d-md-flex">
+          <div class="shadow"></div>
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise.png?raw=true"
+            style="width: 100px"
+            alt="enterprise"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise1.png?raw=true"
+            alt="enterprise1"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise2.png?raw=true"
+            alt="enterprise2"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise8.png?raw=true"
+            alt="enterprise8"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise9.png?raw=true"
+            alt="enterprise9"
+          />
+        </div>
+
+        <!-- 合作夥伴卡片列表 -->
+        <ul class="row justify-content-center align-items-stretch">
+          <div class="col-4">
+            <li class="l-partnerCard rounded">
+              <div class="star">
+                <img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/star.png?raw=true"
+                  alt="star"
+                /><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/star.png?raw=true"
+                  alt="star"
+                /><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/star.png?raw=true"
+                  alt="star"
+                /><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/star.png?raw=true"
+                  alt="star"
+                /><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/star.png?raw=true"
+                  alt="star"
+                />
+              </div>
+              <p>
+                非常喜歡 AI工具王 提供的 AI
+                模型租賃服務，使用起來非常方便，而且效果非常好。對於我們公司的業務來說，這個服務非常重要，因為我們需要大量的數據進行分析和預測，AI工具王
+                提供的 AI 模型能夠幫助我們節省大量時間和成本，實在是太棒了！
+              </p>
+              <div class="d-flex flex-wrap">
+                <img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/avatar3.png?raw=true"
+                  alt="avatar3"
+                  class="me-16"
+                />
+                <div class="d-flex flex-column justify-content-between">
+                  <span>陳小姐</span>
+                  <span>ABC科技有限公司</span>
+                </div>
+              </div>
+            </li>
+          </div>
+          <div class="col-4">
+            <li class="l-partnerCard rounded d-md-none">
+              <div class="star">
+                <img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/star.png?raw=true"
+                  alt="star"
+                /><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/star.png?raw=true"
+                  alt="star"
+                /><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/star.png?raw=true"
+                  alt="star"
+                /><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/star.png?raw=true"
+                  alt="star"
+                /><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/star.png?raw=true"
+                  alt="star"
+                />
+              </div>
+              <p>
+                作為一家醫療器材公司，我們非常關注人工智能技術的應用，而
+                AI工具王 提供的 AI 模型租賃服務為我們帶來了很大的幫助。我們使用
+                AI工具王
+                的模型進行醫學影像分析和預測，這些模型非常精確，能夠幫助我們更好地診斷病情，提高治療效果。感謝
+                AI工具王 團隊的辛勤工作！
+              </p>
+              <div class="d-flex flex-wrap">
+                <img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/avatar1.png?raw=true"
+                  alt="avatar1"
+                  class="me-16"
+                />
+                <div class="d-flex flex-column justify-content-between">
+                  <span>劉小姐</span>
+                  <span>XYZ 醫療器材有限公司</span>
+                </div>
+              </div>
+            </li>
+          </div>
+          <div class="col-4">
+            <li class="l-partnerCard rounded d-md-none">
+              <div class="star">
+                <img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/star.png?raw=true"
+                  alt="star"
+                /><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/star.png?raw=true"
+                  alt="star"
+                /><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/star.png?raw=true"
+                  alt="star"
+                /><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/star.png?raw=true"
+                  alt="star"
+                /><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/star.png?raw=true"
+                  alt="star"
+                />
+              </div>
+              <p>
+                我們銀行一直在尋找能夠幫助我們提高風險控制和客戶服務的解決方案，而
+                AI工具王 提供的 AI 模型租賃服務正好滿足了我們的需求。我們使用
+                AI工具王
+                的模型進行客戶信用評估和詐騙檢測等任務，這些模型非常準確，能夠幫助我們更好地控制風險，提高客戶滿意度。非常感謝
+                AI工具王 團隊的支持！
+              </p>
+              <div class="d-flex flex-wrap">
+                <img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/avatar2.png?raw=true"
+                  alt="avatar2"
+                  class="me-16"
+                />
+                <div class="d-flex flex-column justify-content-between">
+                  <span>黃先生</span>
+                  <span>EFG 銀行</span>
+                </div>
+              </div>
+            </li>
+          </div>
+        </ul>
+        <ul class="partnerCardBtn d-flex justify-content-center">
+          <li class="active"><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
         </ul>
       </section>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script src="./js/all.js"></script>
+    <!-- AI工具王 卡片列表 -->
+    <div class="l-tool">
+      <div class="container">
+        <section class="aiTool">
+          <h2 class="display-3 h2-md mb-80 mb-md-32 text-align-center">
+            這些超酷的應用，都來自 AI工具王
+          </h2>
+          <form class="searchBar d-flex rounded mb-24">
+            <img
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/search.png?raw=true"
+              alt="search"
+              class="me-16 object-fit-contain"
+            />
+            <input
+              type="text"
+              class="fs-s line-height-normal"
+              placeholder="輸入關鍵字搜尋"
+            />
+          </form>
+          <div
+            class="d-flex justify-content-between align-items-center flex-wrap mb-40 mb-md-48"
+          >
+            <button class="aiToolBtn rounded" type="button">
+              <span class="me-16 fs-s line-height-normal">篩選</span>
+              <i class="bi bi-funnel-fill"></i>
+            </button>
+            <table class="aiToolTag">
+              <tbody>
+                <tr>
+                  <td><a href="#" class="active rounded fw-bold">全部</a></td>
+                  <td><a href="#">聊天</a></td>
+                  <td><a href="#">影像辨識</a></td>
+                  <td><a href="#">翻譯</a></td>
+                  <td><a href="#">行銷</a></td>
+                  <td><a href="#">客服</a></td>
+                  <td><a href="#">生產力</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="aiToolBtn d-flex rounded" type="button">
+              <span class="me-16 fs-s line-height-normal">由新到舊</span>
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/keyboard%20arrow%20down.png?raw=true"
+                alt=""
+              />
+            </button>
+          </div>
+          <ul
+            class="mb-40 mb-md-32 d-flex justify-content-between flex-wrap"
+          >
+            <div class="row">
+              <div class="col-4 col-lg-6 mt-md-12">
+                <li class="l-aiToolCard rounded">
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool1.png?raw=true"
+                      alt="AI工具-建立智能化的聊天機器人"
+                    />
+                  </div>
+                  <div class="content">
+                    <h3 class="h6">Chatbot Builder</h3>
+                    <p>
+                      建立智能化的聊天機器人，解答常見問題、提供客戶支援、收集反饋等。
+                    </p>
+                  </div>
+                  <div class="info">
+                    <h4 class="fw-bold">AI 模型</h4>
+                    <span>卡卡</span>
+                  </div>
+                  <div class="tag">
+                    <span>#聊天</span>
+                    <button type="button" class="shareBtn">
+                      <img
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/share.png?raw=true"
+                        alt="分享按鈕"
+                      />
+                    </button>
+                  </div>
+                </li>
+              </div>
+              <div class="col-4 col-lg-6 mt-md-12">
+                <li class="l-aiToolCard rounded">
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool2.png?raw=true"
+                      alt="AI工具-專業的圖像識別平台"
+                    />
+                  </div>
+
+                  <div class="content">
+                    <h3 class="h6">Image Recognition Platform</h3>
+                    <p>專業的圖像識別平台，識別圖像、分類、標記等。</p>
+                  </div>
+                  <div class="info">
+                    <h4 class="fw-bold">AI 模型</h4>
+                    <span>杰杰</span>
+                  </div>
+                  <div class="tag">
+                    <span>#影像辨識</span>
+                    <button type="button" class="shareBtn">
+                      <img
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/share.png?raw=true"
+                        alt="分享按鈕"
+                      />
+                    </button>
+                  </div>
+                </li>
+              </div>
+              <div class="col-4 col-lg-6 mt-lg-24 mt-md-12">
+                <li class="l-aiToolCard rounded">
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool3.png?raw=true"
+                      alt="AI工具-專業的語言翻譯 API"
+                    />
+                  </div>
+
+                  <div class="content">
+                    <h3 class="h6">Language Translation API</h3>
+                    <p>
+                      專業的語言翻譯 API，實現文本翻譯功能，支援多種格式的文本。
+                    </p>
+                  </div>
+                  <div class="info">
+                    <h4 class="fw-bold">AI 模型</h4>
+                    <span>琪琪</span>
+                  </div>
+                  <div class="tag">
+                    <span>#翻譯</span>
+                    <button type="button" class="shareBtn">
+                      <img
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/share.png?raw=true"
+                        alt="分享按鈕"
+                      />
+                    </button>
+                  </div>
+                </li>
+              </div>
+              <div class="col-4 col-lg-6 mt-24 mt-md-12">
+                <li class="l-aiToolCard rounded">
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool4.png?raw=true"
+                      alt="AI工具-自動識別文本中的情感傾向"
+                    />
+                  </div>
+
+                  <div class="content">
+                    <h3 class="h6">Sentiment Analysis API</h3>
+                    <p>
+                      自動識別文本中的情感傾向，包括正向、負向和中性等。適用於情感分析、社交媒體監控、市場調查等。
+                    </p>
+                  </div>
+                  <div class="info">
+                    <h4 class="fw-bold">AI 模型</h4>
+                    <span>昊昊</span>
+                  </div>
+                  <div class="tag">
+                    <span>#行銷</span>
+                    <button type="button" class="shareBtn">
+                      <img
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/share.png?raw=true"
+                        alt="分享按鈕"
+                      />
+                    </button>
+                  </div>
+                </li>
+              </div>
+              <div class="col-4 col-lg-6 mt-24 mt-md-12">
+                <li class="l-aiToolCard rounded">
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool5.png?raw=true"
+                      alt="AI工具-預防詐騙活動"
+                    />
+                  </div>
+
+                  <div class="content">
+                    <h3 class="h6">Fraud Detection Platform</h3>
+                    <p>預防詐騙活動，適用於銀行、金融、電商等。</p>
+                  </div>
+                  <div class="info">
+                    <h4 class="fw-bold">AI 模型</h4>
+                    <span>卡卡</span>
+                  </div>
+                  <div class="tag">
+                    <span>#客服</span>
+                    <button type="button" class="shareBtn">
+                      <img
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/share.png?raw=true"
+                        alt="分享按鈕"
+                      />
+                    </button>
+                  </div>
+                </li>
+              </div>
+              <div class="col-4 col-lg-6 mt-24 mt-md-12">
+                <li class="l-aiToolCard rounded">
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool6.png?raw=true"
+                      alt="AI工具-語音控制應用程式，實現播放音樂、查詢天氣、發送信息"
+                    />
+                  </div>
+
+                  <div class="content">
+                    <h3 class="h6">Voice Assistant SDK</h3>
+                    <p>
+                      通過語音控制應用程式、設備，實現多種功能，例如播放音樂、查詢天氣、發送信息等。
+                    </p>
+                  </div>
+                  <div class="info">
+                    <h4 class="fw-bold">AI 模型</h4>
+                    <span>杰杰</span>
+                  </div>
+                  <div class="tag">
+                    <span>#生產力</span>
+                    <button type="button" class="shareBtn">
+                      <img
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/share.png?raw=true"
+                        alt="分享按鈕"
+                      />
+                    </button>
+                  </div>
+                </li>
+              </div>
+            </div>
+          </ul>
+          <div class="pagination d-flex justify-content-end justify-content-md-center">
+            <a href="#" class="active rounded">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/keyboard%20arrow%20right.png?raw=true"
+                alt="rightarrow"
+              />
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 頁尾-開始使用 -->
+    <div class="container">
+      <section
+        class="footer-startBtn d-flex justify-content-center flex-column align-items-center"
+      >
+        <h2 class="h1 h2-md text-align-center">現在就來建立屬於你的服務吧</h2>
+        <button type="button" class="btn mt-40 mt-md-32">
+          <span class="h6 text-align-center">開始使用</span>
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/call%20made.png?raw=true"
+            alt="開始使用"
+          />
+        </button>
+      </section>
+      <!-- 頁尾 -->
+      <footer class="footer">
+        <div class="d-flex justify-content-between footerTitle">
+          <h2 class="display-3 h1-md d-flex flex-column">
+            <span>首頁</span>
+            <span>定價</span>
+          </h2>
+          <a href="#">
+            <img
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true"
+              class="logo-footer"
+              alt="AI 工具王 logo"
+            />
+          </a>
+        </div>
+        <div class="footerLink">
+          <ul class="d-flex flex-wrap">
+            <li><a href="#" class="me-100">AI工具王 © 2023</a></li>
+            <li class="d-flex me-auto linkGroup">
+              <a href="#" class="me-20">Facebook</a>
+              <a href="#" class="me-20">Twitter</a>
+              <a href="#">Instagram</a>
+            </li>
+            <li class="topBtn">
+              <a href="#">
+                <span class="me-16">Back to top</span>
+                <img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/arrow%20upward.png?raw=true"
+                  alt="arrowUpward"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/all.js"></script> -->
   </body>
 </html>
