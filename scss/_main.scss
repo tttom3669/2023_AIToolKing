@@ -140,7 +140,6 @@
 
 @media (max-width: 992px){
   .aiToolTag {
-    flex-wrap: wrap;
     display: block;
     overflow-x: auto;
     td{
@@ -204,10 +203,12 @@
 
   .footerLink{
     .topBtn {
+      text-align: right;
       order: 2;
       margin-left: auto;
     }
     .linkGroup {
+      width: 100%;
       order: 3;
       margin-top: 36px;
     }

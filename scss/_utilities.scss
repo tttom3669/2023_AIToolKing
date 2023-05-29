@@ -109,6 +109,9 @@
     &-wrap{
         flex-wrap: wrap;
     }
+    &-nowrap{
+        flex-wrap: nowrap;
+    }
     &-grow{
         &-1{
             flex-grow: 1;
@@ -120,6 +123,11 @@
     .flex{
         &-md-column{
             flex-direction: column;
+        }
+    }
+    .flex{
+        &-md-wrap{
+            flex-wrap: wrap;
         }
     }
 }
@@ -180,6 +188,9 @@
 
 @media (max-width: 768px){
     .m{
+        &e-md-auto{
+            margin-right: auto;
+        }
         &t-md-12{
             margin-top: 12px;
         }
