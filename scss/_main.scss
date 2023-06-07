@@ -2,6 +2,13 @@
 .navbar-btn {
   margin-right: 11px;
   padding: 0;
+  @media (max-width: 768px) {
+    margin-right: 0px;
+    display: block;
+  }
+}
+.navbar-collapse{
+  text-align: right;
 }
 
 .decoImg-list {
@@ -60,23 +67,6 @@
   }
 }
 
-// 夥伴名單陰影
-.shadow {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: linear-gradient(
-    to right,
-    #020202 0%,
-    transparent 30%,
-    transparent 50%,
-    transparent 70%,
-    #020202 100%
-  );
-}
-
 .partner {
   margin-bottom: 160px;
 }
@@ -85,35 +75,21 @@
   .partner {
     margin-bottom: 120px;
   }
-
-  .partnerCardBtn {
-    margin-top: 24px;
-    li {
-      width: 12px;
-      height: 12px;
-      background: $gray;
-      border-radius: 50%;
-      margin-right: 8px;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-    .active {
-      background: $primary;
-    }
-  }
 }
 
 // AI工具卡片列表
 .searchBar {
   background: $lightGray;
   padding: 20px 40px;
-  // color: #919191;
-  input{
+  input {
     border: 0;
+    flex-grow: 1;
     background-color: $lightGray;
-    &::placeholder{
+    &::placeholder {
       color: #919191;
+    }
+    &:focus {
+      outline: none;
     }
   }
 }
@@ -121,12 +97,13 @@
   background-color: $primary;
   border: $border-width $border-style $lightGray;
   padding: 20px 40px;
-  flex:0 0 auto;
+  flex: 0 0 auto;
   color: $secondary;
 }
 .aiToolTag {
-    border-collapse:separate;
-    border-spacing: 8px 0px;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
   a {
     display: inline-block;
     color: #919191;
@@ -136,26 +113,13 @@
     background: $lightGray;
     color: $secondary;
   }
-}
 
-@media (max-width: 992px){
-  .aiToolTag {
-    display: block;
-    overflow-x: auto;
-    td{
-      white-space:nowrap
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .aiToolTag {
+  @media (max-width: 768px) {
     margin: 0 auto;
     margin-top: 16px;
     order: 3;
   }
 }
-
 
 .pagination {
   a {
@@ -175,7 +139,6 @@
   }
 }
 
-
 // 頁尾
 .footer-startBtn {
   margin: 80px 0px;
@@ -189,28 +152,40 @@
 }
 
 .footerLink {
-  padding: 32px 0;;
-}
+  padding: 32px 0;
 
-@media (max-width: 768px) {
-  .footerTitle {
-    flex-direction: column;
-    a {
-      order: -1;
-      margin-bottom: 40px;
-    }
-  }
-
-  .footerLink{
-    .topBtn {
-      text-align: right;
-      order: 2;
-      margin-left: auto;
-    }
+  @media (max-width: 768px) {
     .linkGroup {
       width: 100%;
       order: 3;
       margin-top: 36px;
     }
   }
+}
+
+// swiper 套件設定
+.swiper {
+  /* 分頁按鈕調整至距離卡片文字底部 24px
+      扣除按鈕本體寬度 (36px-12px)   */
+  padding-bottom: 36px;
+}
+
+.swiper-pagination.swiper-pagination-bullets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: $gray;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  width: 12px;
+  height: 12px;
+  background-color: $primary;
 }

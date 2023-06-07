@@ -1,7 +1,12 @@
-@import './variable';
-@import './reset';
-@import './base';
-@import './layout';
-@import './module';
-@import './utilities';
+// public
+@import './public/variable';
+@import './public/reset';
+@import './public/base';
+@import './public/mixin';
+@import './public/layout';
+@import './public/module';
+@import './public/utilities';
+
+
 @import './main';
+@import './pricing'

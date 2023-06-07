@@ -1,0 +1,59 @@
+.pricing-slogan {
+  margin-bottom: 238px;
+
+  @include media(768px) {
+    margin-bottom: 258px;
+  }
+}
+
+.pricing-card-list {
+  margin-bottom: 160px;
+
+  @include media(768px) {
+    margin-bottom: 140px;
+  }
+}
+
+.pricing-rules {
+  margin-bottom: 160px;
+
+  @include media(768px) {
+    margin-bottom: 96px;
+  }
+}
+
+.pricing-rule {
+  border-bottom: $border-width $border-style $gray;
+  p {
+    margin-bottom: 40px;
+  }
+  margin-bottom: 40px;
+
+  @include media(768px) {
+    margin-bottom: 24px;
+  }
+}
+
+.qa-list {
+  margin: 160px 0;
+  @include media(768px) {
+    margin: 120px 0;
+  }
+}
+.qa-item {
+  padding: 20px 40px;
+  border: $border-width $border-style $gray;
+
+  img {
+    min-height: 24px;
+    min-width: 24px;
+  }
+
+  &.active {
+    border: $border-width $border-style $primary;
+  }
+
+  &:hover {
+    border-color: $primary;
+  }
+}

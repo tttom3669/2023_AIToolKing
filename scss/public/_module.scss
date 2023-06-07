@@ -1,0 +1,11 @@
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: $border-width $border-style $border-color;
+  color: $primary;
+  border-radius: 16px;
+  padding: 20px 40px;
+  &:hover {
+    background-color: $gray;
+  }
+}
