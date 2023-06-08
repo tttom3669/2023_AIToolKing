@@ -432,11 +432,61 @@
             </form>
             <div
               class="d-flex justify-content-between align-items-center mb-40 mb-md-48 flex-nowrap flex-md-wrap"
-            >
-              <button class="aiToolBtn rounded" type="button">
+            > 
+            <div class="dropdown">
+              <button data-id="filter-btn" class="aiToolBtn rounded" type="button">
                 <span class="me-16 fs-s line-height-normal">篩選</span>
                 <i class="bi bi-funnel-fill"></i>
               </button>
+
+              <div data-id="filter-dropdown-menu" class="filter-dropdown dropdown-menu d-none">
+                <h3>AI 模型</h3>
+                <ul>
+                  <li class="mb-8">
+                    <a href="#" >所有模型</a>
+                  </li>
+                  <li>
+                    <a href="#">卡卡</a>
+                  </li>
+                  <li>
+                    <a href="#">杰杰</a>
+                  </li>
+                  <li>
+                    <a href="#">琪琪</a>
+                  </li>
+                  <li>
+                    <a href="#">昊昊</a>
+                  </li>
+                </ul>
+                <div class="filter-border"></div>
+                <h3>類型</h3>
+                <ul>
+                  <li class="mb-8">
+                    <a href="#">所有類型</a>
+                  </li>
+                  <li>
+                    <a href="#">篩選項目 1</a>
+                  </li>
+                  <li>
+                    <a href="#">篩選項目 2</a>
+                  </li>
+                  <li>
+                    <a href="#">篩選項目 3</a>
+                  </li>
+                  <li>
+                    <a href="#">篩選項目 4</a>
+                  </li>
+                  <li>
+                    <a href="#">篩選項目 5</a>
+                  </li>
+                  <li>
+                    <a href="#">篩選項目 6</a>
+                  </li>
+                </ul>
+              </div>
+              
+
+            </div>
               <ul class="aiToolTag">
                 <li><a href="#" class="active rounded fw-bold">全部</a></li>
                 <li><a href="#">聊天</a></li>
@@ -446,13 +496,24 @@
                 <li><a href="#">客服</a></li>
                 <li><a href="#">生產力</a></li>
               </ul>
-              <button class="aiToolBtn d-flex rounded" type="button">
-                <span class="me-16 fs-s line-height-normal">由新到舊</span>
-                <img
-                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/keyboard%20arrow%20down.png?raw=true"
-                  alt=""
-                />
-              </button>
+              <div class="dropdown">
+                <button data-id="dropdown-btn" class="aiToolBtn d-flex rounded" type="button">
+                  <span class="me-16 fs-s line-height-normal">由新到舊</span>
+                  <img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/keyboard%20arrow%20down.png?raw=true"
+                    alt=""
+                  />
+                </button>
+                <ul data-id="dropdown-menu"  class="dropdown-menu d-none">
+                  <li class="mb-8">
+                    <a href="#" class="new-to-old">由新到舊</a>
+                  </li>
+                  <li>
+                    <a href="#" class="old-to-new">由舊到新</a>
+                  </li>
+                </ul>
+              </div> 
+              
             </div>
             <div
               class="mb-40 mb-md-32 d-flex justify-content-between flex-wrap"
