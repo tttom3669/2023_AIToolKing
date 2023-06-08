@@ -428,10 +428,11 @@
                 type="text"
                 class="fs-s line-height-normal"
                 placeholder="輸入關鍵字搜尋"
+                data-type="search"
               />
             </form>
             <div
-              class="d-flex justify-content-between align-items-center mb-40 mb-md-48 flex-nowrap flex-md-wrap"
+              class="d-flex justify-content-between align-items-center mb-16 mb-md-36 flex-nowrap flex-md-wrap"
             > 
             <div class="dropdown">
               <button data-id="filter-btn" class="aiToolBtn rounded" type="button">
@@ -462,25 +463,25 @@
                 <h3>類型</h3>
                 <ul>
                   <li class="mb-8">
-                    <a href="#">所有類型</a>
+                    <a href="#" data-btn="filter-btn">所有類型</a>
                   </li>
                   <li>
-                    <a href="#">篩選項目 1</a>
+                    <a href="#" data-btn="filter-btn">問答服務</a>
                   </li>
                   <li>
-                    <a href="#">篩選項目 2</a>
+                    <a href="#" data-btn="filter-btn">虛擬客服</a>
                   </li>
                   <li>
-                    <a href="#">篩選項目 3</a>
+                    <a href="#" data-btn="filter-btn">生活應用</a>
                   </li>
                   <li>
-                    <a href="#">篩選項目 4</a>
+                    <a href="#" data-btn="filter-btn">程式知識</a>
                   </li>
                   <li>
-                    <a href="#">篩選項目 5</a>
+                    <a href="#" data-btn="filter-btn">翻譯助手</a>
                   </li>
                   <li>
-                    <a href="#">篩選項目 6</a>
+                    <a href="#" data-btn="filter-btn">行銷文案</a>
                   </li>
                 </ul>
               </div>
@@ -488,17 +489,17 @@
 
             </div>
               <ul class="aiToolTag">
-                <li><a href="#" class="active rounded fw-bold">全部</a></li>
-                <li><a href="#">聊天</a></li>
-                <li><a href="#">影像辨識</a></li>
-                <li><a href="#">翻譯</a></li>
-                <li><a href="#">行銷</a></li>
-                <li><a href="#">客服</a></li>
-                <li><a href="#">生產力</a></li>
+                <li><a href="#" class="active" data-btn="filterTag-btn">所有類型</a></li>
+                <li><a href="#" data-btn="filterTag-btn">問答服務</a></li>
+                <li><a href="#" data-btn="filterTag-btn">虛擬客服</a></li>
+                <li><a href="#" data-btn="filterTag-btn">生活應用</a></li>
+                <li><a href="#" data-btn="filterTag-btn">程式知識</a></li>
+                <li><a href="#" data-btn="filterTag-btn">翻譯助手</a></li>
+                <li><a href="#" data-btn="filterTag-btn">行銷文案</a></li>
               </ul>
               <div class="dropdown">
                 <button data-id="dropdown-btn" class="aiToolBtn d-flex rounded" type="button">
-                  <span class="me-16 fs-s line-height-normal">由新到舊</span>
+                  <span class="me-16 fs-s line-height-normal dropdown-btnText">由新到舊</span>
                   <img
                     src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/keyboard%20arrow%20down.png?raw=true"
                     alt=""
@@ -518,8 +519,8 @@
             <div
               class="mb-40 mb-md-32 d-flex justify-content-between flex-wrap"
             >
-              <ul class="row">
-                <li class="col-4 col-lg-6 col-md-12 mt-md-12">
+              <ul class="row" data-id="aiToolCard-List">
+                <!-- <li class="col-4 col-lg-6 col-md-12 mt-md-12">
                   <div class="l-aiToolCard rounded">
                     <div class="overflow-hidden">
                       <img
@@ -700,12 +701,14 @@
                       </button>
                     </div>
                   </div>
-                </li>
+                </li> -->
               </ul>
             </div>
             <ul
               class="pagination d-flex justify-content-end justify-content-md-center"
-            >
+              data-id="pagination"
+             >
+            <!-- <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
               <li><a href="#" class="active rounded">1</a></li>
               <li><a href="#">2</a></li>
               <li><a href="#">3</a></li>
@@ -718,7 +721,7 @@
                     alt="rightarrow"
                   />
                 </a>
-              </li>
+              </li> -->
             </ul>
           </section>
         </div>
@@ -783,6 +786,7 @@
 
     <!-- swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <!-- jquery -->
     <script
       src="https://code.jquery.com/jquery-3.7.0.js"
@@ -790,7 +794,12 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.js" integrity="sha512-RjvSEaeDqPCfUVQ9kna2/2OqHz/7F04IOl1/66LmQjB/lOeAzwq7LrbTzDbz5cJzlPNJ5qteNtHR56XaJSTNWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
     <script src="./js/swiper.js"></script>
+    <script src="./js/apiData.js"></script>
     <script src="./js/all.js"></script>
   </body>
 </html>

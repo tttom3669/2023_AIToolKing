@@ -649,6 +649,10 @@ button {
   margin-top: 32px;
 }
 
+.mt-36 {
+  margin-top: 36px;
+}
+
 .mt-40 {
   margin-top: 40px;
 }
@@ -695,6 +699,10 @@ button {
 
 .mb-32 {
   margin-bottom: 32px;
+}
+
+.mb-36 {
+  margin-bottom: 36px;
 }
 
 .mb-40 {
@@ -745,6 +753,10 @@ button {
   margin-right: 32px;
 }
 
+.me-36 {
+  margin-right: 36px;
+}
+
 .me-40 {
   margin-right: 40px;
 }
@@ -791,6 +803,10 @@ button {
 
 .ms-32 {
   margin-left: 32px;
+}
+
+.ms-36 {
+  margin-left: 36px;
 }
 
 .ms-40 {
@@ -841,6 +857,10 @@ button {
   margin: 0 32px;
 }
 
+.my-36 {
+  margin: 0 36px;
+}
+
 .my-40 {
   margin: 0 40px;
 }
@@ -884,6 +904,9 @@ button {
   .mt-lg-32 {
     margin-top: 32px;
   }
+  .mt-lg-36 {
+    margin-top: 36px;
+  }
   .mt-lg-40 {
     margin-top: 40px;
   }
@@ -919,6 +942,9 @@ button {
   }
   .mb-lg-32 {
     margin-bottom: 32px;
+  }
+  .mb-lg-36 {
+    margin-bottom: 36px;
   }
   .mb-lg-40 {
     margin-bottom: 40px;
@@ -956,6 +982,9 @@ button {
   .me-lg-32 {
     margin-right: 32px;
   }
+  .me-lg-36 {
+    margin-right: 36px;
+  }
   .me-lg-40 {
     margin-right: 40px;
   }
@@ -992,6 +1021,9 @@ button {
   .ms-lg-32 {
     margin-left: 32px;
   }
+  .ms-lg-36 {
+    margin-left: 36px;
+  }
   .ms-lg-40 {
     margin-left: 40px;
   }
@@ -1027,6 +1059,9 @@ button {
   }
   .my-lg-32 {
     margin: 0 32px;
+  }
+  .my-lg-36 {
+    margin: 0 36px;
   }
   .my-lg-40 {
     margin: 0 40px;
@@ -1066,6 +1101,9 @@ button {
   .mt-md-32 {
     margin-top: 32px;
   }
+  .mt-md-36 {
+    margin-top: 36px;
+  }
   .mt-md-40 {
     margin-top: 40px;
   }
@@ -1101,6 +1139,9 @@ button {
   }
   .mb-md-32 {
     margin-bottom: 32px;
+  }
+  .mb-md-36 {
+    margin-bottom: 36px;
   }
   .mb-md-40 {
     margin-bottom: 40px;
@@ -1138,6 +1179,9 @@ button {
   .me-md-32 {
     margin-right: 32px;
   }
+  .me-md-36 {
+    margin-right: 36px;
+  }
   .me-md-40 {
     margin-right: 40px;
   }
@@ -1174,6 +1218,9 @@ button {
   .ms-md-32 {
     margin-left: 32px;
   }
+  .ms-md-36 {
+    margin-left: 36px;
+  }
   .ms-md-40 {
     margin-left: 40px;
   }
@@ -1209,6 +1256,9 @@ button {
   }
   .my-md-32 {
     margin: 0 32px;
+  }
+  .my-md-36 {
+    margin: 0 36px;
   }
   .my-md-40 {
     margin: 0 40px;
@@ -1584,6 +1634,7 @@ button {
 .aiToolBtn {
   background-color: #ffffff;
   border: 1px solid #f2f2f2;
+  white-space: nowrap;
   padding: 20px 40px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
@@ -1609,6 +1660,8 @@ button {
 .aiToolTag .active {
   background: #f2f2f2;
   color: #020202;
+  font-weight: bold;
+  border-radius: 16px;
 }
 @media (max-width: 768px) {
   .aiToolTag {
@@ -1680,6 +1733,10 @@ button {
   width: 48px;
   height: 48px;
   text-align: center;
+}
+.pagination a:hover {
+  color: #ffffff;
+  background: #020202;
 }
 .pagination .active {
   color: #ffffff;

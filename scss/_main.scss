@@ -96,6 +96,7 @@
 .aiToolBtn {
   background-color: $primary;
   border: $border-width $border-style $lightGray;
+  white-space: nowrap;
   padding: 20px 40px;
   flex: 0 0 auto;
   color: $secondary;
@@ -115,6 +116,8 @@
   .active {
     background: $lightGray;
     color: $secondary;
+    font-weight: bold;
+    border-radius: 16px;
   }
 
   @media (max-width: 768px) {
@@ -177,11 +180,17 @@
     width: 48px;
     height: 48px;
     text-align: center;
+
+    &:hover{
+      color: $primary;
+      background: $secondary;
+    }
   }
   .active {
     color: $primary;
     background: $secondary;
   }
+
 }
 
 // 頁尾
