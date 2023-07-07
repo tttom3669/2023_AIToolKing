@@ -15,3 +15,90 @@ $grid-breakpoints: (
   lg: 992px,
   md: 768px,
 );
+
+$col: (
+  4: 33.3333%,
+  6: 50%,
+  8: 66.6667%,
+  12: 100%,
+);
+
+$display: (flex, none, block);
+
+$align-items: (center, stretch);
+
+$justify-content: (
+  center: center,
+  between: space-between,
+  end: flex-end,
+);
+
+$flex-direction: (column, row, column-reverse, row-reverse);
+
+$flex-wrap: (wrap, nowrap);
+
+$direction: (
+  t: top,
+  b: bottom,
+  e: right,
+  s: left,
+  y: '',
+);
+$distance: (
+  8: 8px,
+  12: 12px,
+  16: 16px,
+  20: 20px,
+  24: 24px,
+  32: 32px,
+  36: 36px,
+  40: 40px,
+  48: 48px,
+  64: 64px,
+  80: 80px,
+  100: 100px,
+  auto: auto,
+);
+
+$font-weight: (
+  bold: 700,
+  bolder: 900,
+);
+
+
+$display-font-size: (
+  1: 160px,
+  2: 120px,
+  3: 80px,
+);
+
+$title-font-size: (
+  1: 48px,
+  2: 40px,
+  3: 32px,
+  4: 28px,
+  5: 24px,
+  6: 20px,
+);
+
+$title-font-size-md: (
+  1: 48px,
+  2: 32px,
+  3: 28px,
+  4: 24px,
+  5: 20px,
+  6: 18px,
+);
+
+$font-size: (
+  1: 48px,
+  2: 40px,
+  3: 32px,
+  4: 28px,
+  5: 24px,
+  6: 20px,
+  s: 16px,
+  xs: 12px,
+);
+
+$object-fit: (cover, contain);

@@ -25,12 +25,17 @@ function getData({ type, sort, page, search }) {
 
     renderWorks();
     renderPages();
+    if (worksData.length === 0) {
+      data.search = '';
+      list.innerHTML =
+        '<li class="col-12 mt-24 mt-md-12 text-align-center fs-3 fs-6-md">查詢不到資料</li>';
+    }
   });
 }
 
 // 渲染 AI 工具
 function renderWorks() {
-//   console.log(worksData);
+  //   console.log(worksData);
   let workContent = '';
 
   worksData.forEach((item) => {
@@ -70,7 +75,7 @@ function renderWorks() {
 }
 // 渲染 頁數
 function renderPages() {
-//   console.log(pagesData);
+  //   console.log(pagesData);
   let pageContent = '';
   const currentPage = Number(pagesData.current_page);
   let startPage = 1;
@@ -103,26 +108,26 @@ function renderPages() {
   page.innerHTML = pageContent;
   paginationListener();
 }
+let pageId = '';
 // 頁數變換監聽
 function paginationListener() {
   const pageLinks = document.querySelectorAll('a.page-link');
-  let pageId = '';
+  const curPage = Number(pagesData.current_page);
 
   pageLinks.forEach((item) => {
     item.addEventListener('click', (e) => {
       e.preventDefault();
-      pageId = e.target.dataset.page;
-    //   console.log(pageId);
-
-      if (pageId === 'next') {
-        data.page = Number(pagesData.current_page) + 1;
-      } else if (pageId === 'pre') {
-        data.page = Number(pagesData.current_page) - 1;
-      } else {
+      if (pageId !== e.target.dataset.page) {
+        if (e.target.dataset.page === 'next') {
+          pageId = curPage + 1;
+        } else if (e.target.dataset.page === 'pre') {
+          pageId = curPage - 1;
+        } else {
+          pageId = e.target.dataset.page;
+        }
         data.page = Number(pageId);
+        getData(data);
       }
-
-      getData(data);
     });
   });
 }
@@ -154,40 +159,40 @@ asc.addEventListener('click', (e) => {
 });
 
 // 切換作品類型
-const filterBtns = document.querySelectorAll('[data-btn="filter-btn"]');
+const filterBtns = document.querySelector('[data-btn="filter-btn"]');
 const filterTagBtns = document.querySelectorAll('[data-btn="filterTag-btn"]');
 
 // 篩選按鈕監聽
-filterBtns.forEach((item) => {
-  item.addEventListener('click', (e) => {
-    e.preventDefault();
-    if (item.textContent === '所有類型') {
-      data.type = '';
-    } else {
-      data.type = item.textContent;
+filterBtns.addEventListener('click', (e) => {
+  e.preventDefault();
+  console.log(e.target);
+  if (e.target.textContent === '所有類型') {
+    data.type = '';
+  } else {
+    data.type = e.target.textContent;
+  }
+
+  filterTagBtns.forEach((btn) => {
+    if (btn.classList.contains('active')) {
+      btn.removeAttribute('class', 'active');
     }
-
-    filterTagBtns.forEach((btn) => {
-      if (btn.classList.contains('active')) {
-        btn.removeAttribute('class', 'active');
-      }
-      if (btn.textContent === item.textContent) {
-        btn.setAttribute('class', 'active');
-      }
-    });
-
-    $(`[data-id="filter-dropdown-menu"]`).toggleClass('d-block');
-    getData(data);
+    if (btn.textContent === e.target.textContent) {
+      btn.setAttribute('class', 'active');
+    }
   });
+
+  $(`[data-id="filter-dropdown-menu"]`).toggleClass('d-block');
+  getData(data);
 });
+
 // 篩選標籤監聽
 filterTagBtns.forEach((item) => {
   item.addEventListener('click', (e) => {
     e.preventDefault();
-    if (item.textContent === '所有類型') {
+    if (e.target.textContent === '所有類型') {
       data.type = '';
     } else {
-      data.type = item.textContent;
+      data.type = e.target.textContent;
     }
 
     filterTagBtns.forEach((btn) => {
@@ -212,4 +217,5 @@ search.addEventListener('keydown', (e) => {
     data.page = 1;
     getData(data);
   }
+  search.value = '';
 });

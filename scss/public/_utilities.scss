@@ -7,16 +7,11 @@
 
 .row {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   margin: 0px (-$gutter-width/2);
 }
 
-$col: (
-  4: 33.3333%,
-  6: 50%,
-  8: 66.6667%,
-  12: 100%,
-);
 
 @each $column, $width in $col {
   .col-#{$column} {
@@ -37,7 +32,6 @@ $col: (
 }
 
 // --- display ---
-$display: (flex, none, block);
 
 @each $item in $display {
   .d-#{$item} {
@@ -56,18 +50,12 @@ $display: (flex, none, block);
 }
 
 // --- flex ---
-$align-items: (center, stretch);
 
 @each $item in $align-items {
   .align-items-#{$item} {
     align-items: $item;
   }
 }
-$justify-content: (
-  center: center,
-  between: space-between,
-  end: flex-end,
-);
 
 @each $key, $value in $justify-content {
   .justify-content-#{$key} {
@@ -85,7 +73,7 @@ $justify-content: (
   }
 }
 
-$flex-direction: (column, row, column-reverse, row-reverse);
+
 
 @each $item in $flex-direction {
   .flex-#{$item} {
@@ -102,7 +90,6 @@ $flex-direction: (column, row, column-reverse, row-reverse);
   }
 }
 
-$flex-wrap: (wrap, nowrap);
 
 @each $item in $flex-wrap {
   .flex-#{$item} {
@@ -128,28 +115,6 @@ $flex-grow: (1);
 }
 
 // ---margin、padding---
-$direction: (
-  t: top,
-  b: bottom,
-  e: right,
-  s: left,
-  y: '',
-);
-$distance: (
-  8: 8px,
-  12: 12px,
-  16: 16px,
-  20: 20px,
-  24: 24px,
-  32: 32px,
-  36: 36px,
-  40: 40px,
-  48: 48px,
-  64: 64px,
-  80: 80px,
-  100: 100px,
-  auto: auto,
-);
 
 @each $key, $value in $direction {
   @each $disKey, $disVal in $distance {
@@ -180,31 +145,11 @@ $distance: (
 }
 // --- 文字相關 ---
 
-$font-weight: (
-  bold: 700,
-  bolder: 900,
-);
-
 @each $key, $value in $font-weight {
   .fw-#{$key} {
     font-weight: $value;
   }
 }
-
-$display-font-size: (
-  1: 160px,
-  2: 120px,
-  3: 80px,
-);
-
-$title-font-size: (
-  1: 48px,
-  2: 40px,
-  3: 32px,
-  4: 28px,
-  5: 24px,
-  6: 20px,
-);
 
 @mixin font-style {
   font-weight: 900;
@@ -225,14 +170,6 @@ $title-font-size: (
   }
 }
 
-$title-font-size-md: (
-  1: 48px,
-  2: 32px,
-  3: 28px,
-  4: 24px,
-  5: 20px,
-  6: 18px,
-);
 
 @each $key, $value in $title-font-size-md {
   @include media(768px) {
@@ -242,16 +179,7 @@ $title-font-size-md: (
   }
 }
 
-$font-size: (
-  1: 48px,
-  2: 40px,
-  3: 32px,
-  4: 28px,
-  5: 24px,
-  6: 20px,
-  s: 16px,
-  xs: 12px,
-);
+
 
 @each $key, $value in $font-size {
   .fs-#{$key} {
@@ -289,6 +217,9 @@ $font-size: (
   &-bottom {
     border-bottom: $border-width solid $border-color;
   }
+  &-top {
+    border-top: $border-width solid $border-color;
+  }
   &-0 {
     border: 0;
   }
@@ -302,9 +233,13 @@ $font-size: (
   }
 }
 
-$object-fit: (cover, contain);
+
 @each $item in $object-fit {
   .object-fit-#{$item} {
     object-fit: $item;
   }
+}
+
+.overflow-y-hidden{
+  overflow-y:hidden;
 }

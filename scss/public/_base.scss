@@ -1,28 +1,32 @@
-*,*::before,*::after{
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
- 
-img{
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
+html {
+  scroll-behavior: smooth;
 }
-
-body{
-    background-color: $secondary;
-    color: $primary;
-    font-size: 16px;
-    font-family: 'Noto Sans TC', sans-serif;
-    line-height: 150%;
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-a{
-    text-decoration: none;
-    color: $primary;
-    &:hover{
-        opacity: 0.8;
-    }
+body {
+  background-color: $secondary;
+  color: $primary;
+  font-size: 16px;
+  font-family: 'Noto Sans TC', sans-serif;
+  line-height: 150%;
 }
-button{
-    cursor: pointer;
+
+a {
+  text-decoration: none;
+  color: $primary;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+button {
+  cursor: pointer;
 }

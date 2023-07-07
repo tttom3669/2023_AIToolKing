@@ -57,15 +57,29 @@
             </ul>
           </nav>
         </div>
-        <!-- 手機版導覽列 -->
-        <ul
-          data-id="navbar-collapse"
-          class="fw-bold d-none mt-md-12 navbar-collapse"
-        >
-          <li><a href="#">首頁</a></li>
-          <li class="mt-md-12"><a href="./pricing.html">定價</a></li>
-        </ul>
       </header>
+    </div>
+    <!-- 手機版導覽列 -->
+    <div data-id="navbar-collapse" class="fw-bold mt-md-12 d-none">
+      <div class="mb-auto mt-auto">
+        <div><a href="#" class="display-3">首頁</a></div>
+        <div class="mt-md-12">
+          <a href="./pricing.html" class="display-3">定價</a>
+        </div>
+      </div>
+      <!-- 頁尾 -->
+      <div class="border-top">
+        <div class="footerLink">
+          <ul class="d-flex flex-wrap">
+            <li><a href="#" class="me-100 me-md-auto">AI工具王 © 2023</a></li>
+            <li class="d-flex me-auto linkGroup">
+              <a href="#" class="me-20">Facebook</a>
+              <a href="#" class="me-20">Twitter</a>
+              <a href="#">Instagram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <main>
@@ -110,7 +124,7 @@
         <section class="service">
           <div class="row mb-80 mb-md-48">
             <div class="col-4 col-md-12">
-              <h2 class="h3 h5-md">我們的服務</h2>
+              <h3 class="h3 h5-md">我們的服務</h3>
             </div>
             <div class="col-8 col-md-12 mt-md-24">
               <p class="h1 h2-md">
@@ -127,7 +141,7 @@
                   alt="快速"
                   class="mb-20"
                 />
-                <h3 class="h3 mb-20">快速</h3>
+                <h4 class="h3 mb-20">快速</h4>
                 <p>
                   我們先進的推理基礎設施提供了極短的響應時間，讓你的產品服務不間斷。
                 </p>
@@ -140,7 +154,7 @@
                   alt="靈活"
                   class="mb-20"
                 />
-                <h3 class="h3 mb-20">靈活</h3>
+                <h4 class="h3 mb-20">靈活</h4>
                 <p>
                   我們的服務可以根據您的需求進行靈活調整，同時還可以滿足不同項目和預算的需求。
                 </p>
@@ -153,7 +167,7 @@
                   alt="擴充"
                   class="mb-20"
                 />
-                <h3 class="h3 mb-20">擴充</h3>
+                <h4 class="h3 mb-20">擴充</h4>
                 <p>
                   我們的服務支持多種擴充選項，可以滿足您的不斷增長的 AI 需求。
                 </p>
@@ -166,7 +180,7 @@
         <section class="partner">
           <h2 class="h3 h5-md mb-80 mb-md-24">來自合作夥伴</h2>
           <ul class="l-partnerList mb-20 mb-md-12">
-            <div class="shadow"></div>
+            <li class="shadow"></li>
             <li>
               <img
                 src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise.png?raw=true"
@@ -425,7 +439,7 @@
                 class="me-16 object-fit-contain"
               />
               <input
-                type="text"
+                type="search"
                 class="fs-s line-height-normal"
                 placeholder="輸入關鍵字搜尋"
                 data-type="search"
@@ -433,63 +447,72 @@
             </form>
             <div
               class="d-flex justify-content-between align-items-center mb-16 mb-md-36 flex-nowrap flex-md-wrap"
-            > 
-            <div class="dropdown">
-              <button data-id="filter-btn" class="aiToolBtn rounded" type="button">
-                <span class="me-16 fs-s line-height-normal">篩選</span>
-                <i class="bi bi-funnel-fill"></i>
-              </button>
+            >
+              <div class="dropdown">
+                <button
+                  data-id="filter-btn"
+                  class="aiToolBtn rounded"
+                  type="button"
+                >
+                  <span class="me-16 fs-s line-height-normal">篩選</span>
+                  <i class="bi bi-funnel-fill"></i>
+                </button>
 
-              <div data-id="filter-dropdown-menu" class="filter-dropdown dropdown-menu d-none">
-                <h3>AI 模型</h3>
-                <ul>
-                  <li class="mb-8">
-                    <a href="#" >所有模型</a>
-                  </li>
-                  <li>
-                    <a href="#">卡卡</a>
-                  </li>
-                  <li>
-                    <a href="#">杰杰</a>
-                  </li>
-                  <li>
-                    <a href="#">琪琪</a>
-                  </li>
-                  <li>
-                    <a href="#">昊昊</a>
-                  </li>
-                </ul>
-                <div class="filter-border"></div>
-                <h3>類型</h3>
-                <ul>
-                  <li class="mb-8">
-                    <a href="#" data-btn="filter-btn">所有類型</a>
-                  </li>
-                  <li>
-                    <a href="#" data-btn="filter-btn">問答服務</a>
-                  </li>
-                  <li>
-                    <a href="#" data-btn="filter-btn">虛擬客服</a>
-                  </li>
-                  <li>
-                    <a href="#" data-btn="filter-btn">生活應用</a>
-                  </li>
-                  <li>
-                    <a href="#" data-btn="filter-btn">程式知識</a>
-                  </li>
-                  <li>
-                    <a href="#" data-btn="filter-btn">翻譯助手</a>
-                  </li>
-                  <li>
-                    <a href="#" data-btn="filter-btn">行銷文案</a>
-                  </li>
-                </ul>
+                <div
+                  data-id="filter-dropdown-menu"
+                  class="filter-dropdown dropdown-menu d-none"
+                >
+                  <h3>AI 模型</h3>
+                  <ul>
+                    <li class="mb-8">
+                      <a href="#">所有模型</a>
+                    </li>
+                    <li>
+                      <a href="#">卡卡</a>
+                    </li>
+                    <li>
+                      <a href="#">杰杰</a>
+                    </li>
+                    <li>
+                      <a href="#">琪琪</a>
+                    </li>
+                    <li>
+                      <a href="#">昊昊</a>
+                    </li>
+                  </ul>
+                  <div class="filter-border"></div>
+                  <h3>類型</h3>
+                  <ul data-btn="filter-btn">
+                    <li class="mb-8">
+                      <a href="#" >所有類型</a>
+                    </li>
+                    <li>
+                      <a href="#" >問答服務</a>
+                    </li>
+                    <li>
+                      <a href="#" >虛擬客服</a>
+                    </li>
+                    <li>
+                      <a href="#" >生活應用</a>
+                    </li>
+                    <li>
+                      <a href="#" >程式知識</a>
+                    </li>
+                    <li>
+                      <a href="#" >翻譯助手</a>
+                    </li>
+                    <li>
+                      <a href="#" >行銷文案</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              
-
-            </div>
               <ul class="aiToolTag">
-                <li><a href="#" class="active" data-btn="filterTag-btn">所有類型</a></li>
+                <li>
+                  <a href="#" class="active" data-btn="filterTag-btn"
+                    >所有類型</a
+                  >
+                </li>
                 <li><a href="#" data-btn="filterTag-btn">問答服務</a></li>
                 <li><a href="#" data-btn="filterTag-btn">虛擬客服</a></li>
                 <li><a href="#" data-btn="filterTag-btn">生活應用</a></li>
@@ -498,14 +521,20 @@
                 <li><a href="#" data-btn="filterTag-btn">行銷文案</a></li>
               </ul>
               <div class="dropdown">
-                <button data-id="dropdown-btn" class="aiToolBtn d-flex rounded" type="button">
-                  <span class="me-16 fs-s line-height-normal dropdown-btnText">由新到舊</span>
+                <button
+                  data-id="dropdown-btn"
+                  class="aiToolBtn d-flex rounded"
+                  type="button"
+                >
+                  <span class="me-16 fs-s line-height-normal dropdown-btnText"
+                    >由新到舊</span
+                  >
                   <img
                     src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/keyboard%20arrow%20down.png?raw=true"
                     alt=""
                   />
                 </button>
-                <ul data-id="dropdown-menu"  class="dropdown-menu d-none">
+                <ul data-id="dropdown-menu" class="dropdown-menu d-none">
                   <li class="mb-8">
                     <a href="#" class="new-to-old">由新到舊</a>
                   </li>
@@ -513,8 +542,7 @@
                     <a href="#" class="old-to-new">由舊到新</a>
                   </li>
                 </ul>
-              </div> 
-              
+              </div>
             </div>
             <div
               class="mb-40 mb-md-32 d-flex justify-content-between flex-wrap"
@@ -707,8 +735,8 @@
             <ul
               class="pagination d-flex justify-content-end justify-content-md-center"
               data-id="pagination"
-             >
-            <!-- <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
+            >
+              <!-- <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
               <li><a href="#" class="active rounded">1</a></li>
               <li><a href="#">2</a></li>
               <li><a href="#">3</a></li>
@@ -730,9 +758,9 @@
       <!-- 頁尾-開始使用 -->
       <div class="container">
         <section
-          class="footer-startBtn d-flex justify-content-center flex-column align-items-center"
+          class="footer-startBtn text-align-center"
         >
-          <h2 class="h1 h2-md text-align-center">現在就來建立屬於你的服務吧</h2>
+          <h2 class="h1 h2-md">現在就來建立屬於你的服務吧</h2>
           <button type="button" class="btn mt-40 mt-md-32">
             <span class="h6 text-align-center">開始使用</span>
             <img
@@ -750,7 +778,7 @@
         <div
           class="d-flex justify-content-between footerTitle flex-md-column-reverse"
         >
-          <ul class="display-3 h1-md d-flex flex-column">
+          <ul class="display-3 h1-md">
             <li><a href="#">首頁</a></li>
             <li><a href="./pricing.html">定價</a></li>
           </ul>
@@ -795,8 +823,12 @@
     ></script>
 
     <!-- axios -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.js" integrity="sha512-RjvSEaeDqPCfUVQ9kna2/2OqHz/7F04IOl1/66LmQjB/lOeAzwq7LrbTzDbz5cJzlPNJ5qteNtHR56XaJSTNWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.js"
+      integrity="sha512-RjvSEaeDqPCfUVQ9kna2/2OqHz/7F04IOl1/66LmQjB/lOeAzwq7LrbTzDbz5cJzlPNJ5qteNtHR56XaJSTNWw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <script src="./js/swiper.js"></script>
     <script src="./js/apiData.js"></script>
